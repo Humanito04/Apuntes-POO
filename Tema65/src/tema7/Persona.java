@@ -82,6 +82,7 @@ public class Persona extends Object{
 		}
 		return result;
 	}
-	
+	public abstract int mostrarDatos();
+
 	
 }

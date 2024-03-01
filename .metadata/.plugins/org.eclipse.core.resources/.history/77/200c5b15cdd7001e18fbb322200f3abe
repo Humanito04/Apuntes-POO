@@ -1,0 +1,13 @@
+package mamiferos;
+
+import zoologico.Animal;
+
+public class Herviboro extends Animal {
+	
+	private TipoDeDieta tipodecomida;
+	
+	public Herviboro(String tipodepelaje,int numeroDePatas) {
+		super(numeroDePatas,tipodepelaje);
+		this.tipodecomida = TipoDeDieta.valueOf(tipodecomida);
+	}
+}

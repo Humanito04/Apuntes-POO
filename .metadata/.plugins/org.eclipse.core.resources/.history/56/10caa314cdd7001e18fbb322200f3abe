@@ -1,0 +1,24 @@
+package mamiferos;
+
+import zoologico.Animal;
+
+public class Carnivoro extends Animal{
+	
+	//Atributos
+	private NivelDeAgresividad nivel;
+	
+	//Constructores
+	public Carnivoro(String tipodepelaje,int numeroDePatas) {
+		super( numeroDePatas, tipodepelaje);
+		this.nivel = NivelDeAgresividad.valueOf(nivel);
+	}
+	//Getters y Setters
+	public NivelDeAgresividad getNivelDeAgresividad() {
+		return nivel;
+	}
+	public void setNivelDeAgresividad (NivelDeAgresividad nivel) {
+		this.nivel = nivel;
+	}
+	
+
+}

@@ -1,0 +1,6 @@
+package aves;
+
+public class Ave extends Animal{
+	private LongitudDeAlas longitud;
+	private TipodePico tipoPico;
+}

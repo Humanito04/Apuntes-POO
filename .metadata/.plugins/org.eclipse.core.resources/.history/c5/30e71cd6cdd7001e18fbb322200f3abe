@@ -1,0 +1,5 @@
+package mamiferos.copy;
+
+public enum TipoDePelaje {
+PELUDO, POCOPELUDO, MUYPELUDO
+}

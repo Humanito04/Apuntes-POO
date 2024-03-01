@@ -2,6 +2,8 @@ package tema7;
 
 public class Empleado extends Persona {
 	
+	
+
 	private double salario;
 
 	public Empleado(String nombre, int edad, double estatura, double salario) {
@@ -24,6 +26,13 @@ public class Empleado extends Persona {
 				+ "estatura=" + this.getEstatura()
 				+ "salario=" + this.salario + "]";
 	}
+
+	@Override
+	public int mostrarDatos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 	
 	
 }

@@ -1,0 +1,32 @@
+package zoologico;
+
+public class Animal {
+	
+	//Atributos
+	private double peso;
+	private TamanoAnimal tamano;
+	
+	//Constructor/es
+	public Animal(double peso, String tamano) {
+		this.peso = peso;
+		this.tamano = TamanoAnimal.valueOf(tamano);
+	}
+	
+	//Getters y Setters
+	public double getPeso() {
+		return this.peso;
+	}
+	
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	
+	public TamanoAnimal getTamano() {
+		return tamano;
+	}
+	public void setTamano(TamanoAnimal tamano) {
+		this.tamano = tamano;
+	}
+	
+	
+}

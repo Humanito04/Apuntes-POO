@@ -1,0 +1,5 @@
+package mamiferos.copy;
+
+public enum NivelDeAgresividad {
+	FURIOSO, TRANQUILO, HAMBRIENTO
+}

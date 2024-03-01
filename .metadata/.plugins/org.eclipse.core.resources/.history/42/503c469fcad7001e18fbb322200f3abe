@@ -1,0 +1,34 @@
+package mamiferos;
+
+import zoologico.Animal;
+
+public class Mamifero extends Animal {
+	
+	//Atributos
+	private int numeroDePatas;
+	private TipoDePelaje tipodepelaje;
+	
+	
+	public Mamifero(int numeroDePatas, String tipodepelaje,double peso) {
+		super(peso, tipodepelaje);
+		this.numeroDePatas = numeroDePatas;
+		this.tipodepelaje = TipoDePelaje.valueOf(tipodepelaje);
+	}
+	
+	public int getNumeroDePatas() {
+		return this.numeroDePatas;
+	}
+	
+	public void setNumeroDePatas(int numeroDePatas) {
+		this.numeroDePatas = numeroDePatas;
+	}
+	
+	public TipoDePelaje getTipoDePelaje() {
+		return tipodepelaje;
+	}
+	
+	public void setTipoDePelaje(TipoDePelaje tipodepelaje) {
+		this.tipodepelaje = tipodepelaje;
+	}
+	
+}
