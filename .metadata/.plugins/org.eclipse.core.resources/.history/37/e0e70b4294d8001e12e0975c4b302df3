@@ -1,0 +1,38 @@
+package aves;
+
+import clasesEnumeradas.LongitudDeAlas;
+import clasesEnumeradas.TipoDePico;
+import zoologico.Animal;
+
+public abstract class Ave extends Animal{
+	private LongitudDeAlas longitud;
+	private TipoDePico tipoPico;
+	
+	public Ave(double peso, String tamano,String longitud,String tipoPico) {
+		super(peso,tamano);
+		this.longitud = LongitudDeAlas.valueOf(longitud);
+		this.tipoPico= TipoDePico.valueOf(tipoPico);
+	}
+
+	public LongitudDeAlas getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(LongitudDeAlas longitud) {
+		this.longitud = longitud;
+	}
+
+	public TipoDePico getTipoPico() {
+		return tipoPico;
+	}
+
+	public void setTipoPico(TipoDePico tipoPico) {
+		this.tipoPico = tipoPico;
+	}
+	public void desplazarse() {
+		System.out.println("Estoy saltando con mis patitas");
+	}
+	public void comer() {
+		System.out.println("Estoy comiendo semillitas");
+	}
+}

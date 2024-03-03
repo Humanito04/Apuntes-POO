@@ -1,5 +1,7 @@
 package aves;
 
+import clasesEnumeradas.AlturaMaximaDeVuelo;
+
 public class Voladora extends Ave {
 	private AlturaMaximaDeVuelo alturaVuelo;
 	
@@ -16,5 +18,37 @@ public class Voladora extends Ave {
 		this.alturaVuelo = alturaVuelo;
 	}
 	
+	@Override
+	public String toString() {
+		return "Ave [peso=" + this.getPeso()
+				+ ", tamano= " + this.getTamano()
+				+ ", longitud=" + this.getLongitud()
+				+ ", Tipo de Pico=" + this.getTipoPico()
+				+ ", Altura de Vuelo" + this.alturaVuelo
+				+ "]";
+	}
 	
+	@Override
+	public boolean equals(Object obj) {	
+		Voladora otro = (Voladora) obj;
+		boolean result = false;
+		
+		if(this.getPeso() ==(otro.getPeso()) && 
+				this.getTamano() == otro.getTamano() &&
+				this.getLongitud().equals(otro.getLongitud()) &&
+				this.getTipoPico().equals(otro.getTipoPico()) &&
+				this.alturaVuelo.equals(otro.alturaVuelo)) {
+			result = true;
+		}
+		
+		return result;
+	}
+	
+	public void desplazarse() {
+		System.out.println("Estoy volando");
+	}
+	
+	public void comer() {
+		System.out.println("Estoy comiendo");
+	}
 }

@@ -1,16 +1,17 @@
 package mamiferos;
 
+import clasesEnumeradas.TipoDePelaje;
 import zoologico.Animal;
 
-public class Mamifero extends Animal {
+public abstract class Mamifero extends Animal {
 	
 	//Atributos
 	private int numeroDePatas;
 	private TipoDePelaje tipodepelaje;
 	
 	
-	public Mamifero(int numeroDePatas, String tipodepelaje, double peso) {
-		super(peso, tipodepelaje);
+	public Mamifero(int numeroDePatas, String tipodepelaje, double peso, String tamano) {
+		super(peso, tamano);
 		this.numeroDePatas = numeroDePatas;
 		this.tipodepelaje = TipoDePelaje.valueOf(tipodepelaje);
 	}
@@ -29,6 +30,38 @@ public class Mamifero extends Animal {
 	
 	public void setTipoDePelaje(TipoDePelaje tipodepelaje) {
 		this.tipodepelaje = tipodepelaje;
+	}
+	
+	@Override
+	public String toString() {
+		return "Mamífero [peso=" + this.getPeso()
+				+ ", tamano= " + this.getTamano()
+				+ ", numeroDePatas=" + this.numeroDePatas
+				+ ", tipoDePelaje=" + this.tipodepelaje
+				+ "]";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {	
+		Mamifero otro = (Mamifero) obj;
+		boolean result = false;
+		
+		if(this.getPeso() ==(otro.getPeso()) && 
+				this.getTamano() == otro.getTamano() &&
+				this.numeroDePatas == (otro.numeroDePatas) &&
+				this.tipodepelaje.equals(otro.tipodepelaje)) {
+			result = true;
+		}
+		
+		return result;
+	}
+	
+	public void amamantar() {
+		System.out.println("Estoy amamantando a mis crias");
+	}
+	
+	public void correr() {
+		System.out.println("Estoy corriendo");
 	}
 	
 }

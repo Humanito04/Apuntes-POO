@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="clasesEnumeradas.TipoDePelaje"/>
+    <fullyQualifiedTypeName name="clasesEnumeradas.NivelDeAgresividad"/>
+    <fullyQualifiedTypeName name="clasesEnumeradas.TamanoAnimal"/>
+    <fullyQualifiedTypeName name="mamiferos.Carnivoro"/>
+</qualifiedTypeNameHistroy>
